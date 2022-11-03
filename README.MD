@@ -1,4 +1,17 @@
 # Golang Migrate
+## Installation
+MacOS
+```bash
+brew install golang-migrate
+```
+Linux
+```bash
+curl -L https://packagecloud.io/golang-migrate/migrate/gpgkey | apt-key add -
+echo "deb https://packagecloud.io/golang-migrate/migrate/ubuntu/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/migrate.list
+apt-get update
+apt-get install -y migrate
+```
+## First Steps
 for creating migrations
 ```bash
 migrate create -ext sql -dir db/migrations -seq migration_name
